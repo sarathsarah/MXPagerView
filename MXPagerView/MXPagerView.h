@@ -156,6 +156,11 @@ typedef NS_ENUM(NSInteger, MXPagerViewTransitionStyle) {
 @property (nonatomic, readonly) CGFloat progress;
 
 /**
+ Reloads all the pages instead of particular index and neighbour one (By default 0 and 1 index only get loaded)
+ */
+@property (nonatomic) BOOL isReloadAllPages;
+
+/**
  Reloads everything from scratch. redisplays pages.
  */
 - (void)reloadData;

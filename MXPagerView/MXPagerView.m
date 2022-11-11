@@ -115,8 +115,15 @@
     //Updates index and loads the current selected page
     if ( (_count = [self.dataSource numberOfPagesInPagerView:self]) > 0) {
         _index = MIN(_index, _count - 1);
-        [self loadPageAtIndex:_index];
-        [self setNeedsLayout];
+        if (_isReloadAllPages) {
+            for (int i = 0; i < _count; i++) {
+                [self loadPageAtIndex:i];
+                [self setNeedsLayout];
+            }
+        } else {
+            [self loadPageAtIndex:_index];
+            [self setNeedsLayout];
+        }
     }
 }
 
@@ -270,10 +277,12 @@
 
     loadPage(index);
 
-    //In  case of slide behavior, its loads the neighbors as well.
-    if (self.transitionStyle == MXPagerViewTransitionStyleScroll) {
-        loadPage(index - 1);
-        loadPage(index + 1);
+    if (!_isReloadAllPages) {
+        //In  case of slide behavior, its loads the neighbors as well.
+        if (self.transitionStyle == MXPagerViewTransitionStyleScroll) {
+            loadPage(index - 1);
+            loadPage(index + 1);
+        }
     }
 }
 
