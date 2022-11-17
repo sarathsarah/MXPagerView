@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name             = "MXPagerViewUpdate"
-  s.version          = "1.0.0"
+  s.name             = "MXPagerView"
+  s.version          = "2.0.0"
   s.summary          = "Pager view with reusable page and storyboard support."
 
 # This description is used to generate tags and improve search results.
