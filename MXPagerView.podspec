@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = "MXPagerView"
+  s.name             = "MXPagerViewUpdate"
   s.version          = "1.0.0"
   s.summary          = "Pager view with reusable page and storyboard support."
 
@@ -15,11 +15,11 @@ Pod::Spec.new do |s|
                         MXPagerViewController allows you to load pages from storyboard using the MXPageSegue.
                        DESC
 
-  s.homepage         = "https://github.com/maxep/MXPagerView"
+  s.homepage         = "https://github.com/Dharanis1/MXPagerView"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Maxime Epain" => "maxime.epain@gmail.com" }
-  s.source           = { :git => "https://github.com/maxep/MXPagerView.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/Dharanis1/MXPagerView.git", :tag => 2.0.0 }
   s.social_media_url = 'https://twitter.com/MaximeEpain'
 
   s.platform     = :ios, '7.0'
